@@ -51,6 +51,14 @@ app.get('/bad', (req, res) => {
     errorMessage: 'Unable to handle request'
   });
 });
+
+app.get('/projects', (req, res) => {
+    res.render('projects', {
+      pageTitle: 'About Page',
+      currentYear: new Date().getFullYear()
+    });
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
